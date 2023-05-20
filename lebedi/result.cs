@@ -11,7 +11,7 @@ using Microsoft.CSharp;
 
 using System.Diagnostics;
 using System.ComponentModel;
-using IronPython.Hosting;
+//using IronPython.Hosting;
 
 
 
@@ -30,24 +30,24 @@ namespace lebedi
             InitializeComponent();
 
 
-            var engine = Python.CreateEngine();
-            dynamic py = engine.ExecuteFile(@"D:\project\main.py");
+            //var engine = Python.CreateEngine();
+            //dynamic py = engine.ExecuteFile(@"D:\project\main.py");
 
-            dynamic calc = py.Calculator();
+            //dynamic calc = py.Calculator();
 
-            string a;
-            string res;
-            string[] row = { "", "" };
-            ListViewItem lvi;
-            for (int i = 0; i < files.Count; i++)
-            {
-                a = files[i];
-                res = calc.predict(a);
-                row[0] = a;
-                row[1] = res;
-                lvi = new ListViewItem(row);
-                listView1.Items.Add(lvi);
-            }
+            //string a;
+            //string res;
+            //string[] row = { "", "" };
+            //ListViewItem lvi;
+            //for (int i = 0; i < files.Count; i++)
+            //{
+            //    a = files[i];
+            //    res = calc.predict(a);
+            //    row[0] = a;
+            //    row[1] = res;
+            //    lvi = new ListViewItem(row);
+            //    listView1.Items.Add(lvi);
+            //}
 
             listView1.View = View.Details;
 
